@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <div class="library">
+        <h1 class="title">Library</h1>
+    </div>
+    
+</head>
+<body>
+<div class="overlay"></div>
+<div class="bookshelf"></div>
+<div>
+    <button class="add">+</button>
+</div>
+<section id="popup">
+<div id="wrap">
+    <h1>New Book</h1>
+    <button type="button" class="close">+</button>
+    <form id="form" action="/" method="get">
+        <label for="userTitle">Book</label><br>
+        <input
+         type="text" 
+        id="userTitle" 
+        name="title"
+        placeholder="Title" 
+        autocomplete="off" 
+        maxlength="15"
+        minlength="2"
+        pattern="[A-Za-z0-9]+"
+        title="Please enter letters"
+        required>
+        <br>
+        <label for="userAuthor">Author</label><br>
+        <input 
+        type="text" 
+        id="userAuthor" 
+        placeholder="Name" 
+        name="author" 
+        autocomplete="off" 
+        maxlength="15"
+        minlength="2"
+        pattern="[A-Za-z]+"
+        title="Please enter letters"
+        required>
+        <br>
+        <label for="pages">Pages:</label><br>
+        <input 
+        type="number"
+        id="pages"
+        name="pages"
+        placeholder="Pages"
+        autocomplete="off"
+        max="1079"
+        min="0"
+        required>
+        <br>
+        <label for="read">Read Book:</label><br>
+        <select name="read" id="read">
+            <option value="Yes">Yes 😃</option>
+            <option value="No">No 😢</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</section>
+</body>
+</html>
