@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+
+}
+
+*::before::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: monospace;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+   image-rendering: optimizeQuality;
+   image-rendering: crisp-edges !important;
+   background-color: rgb(24, 24, 53);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;          /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: white;    /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent;  /* creates padding around scroll thumb */
+  }
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
+}
+
+table {
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    text-align: center;
+    padding-right: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+    margin-top: 50px;
+    background-color: black;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.library {
+    
+    background-color: rgb(21, 97, 97);
+    padding-top: 20px;
+    margin-top: 0px;
+    padding-bottom: 30px;
+}
+
+.main_title {
+    background-color: rgb(21, 97, 97);
+    text-align: center;
+    width: 250px;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 20px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.author {
+    margin-top: -7px;
+    border-bottom: 1px solid white;
+}
+
+.pages {
+    border-bottom: 1px solid white;
+}
+
+.read {
+    border-bottom: 1px solid white;
+}
+
+.update {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 170px;
+    border-radius: 5px;
+    background-color: rgb(21, 97, 97);
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.update:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 3px white;
+    color: white;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    border-color: transparent;
+}
+
+.clear {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 170px;
+    border-radius: 5px;
+    background-color: rgb(21, 97, 97);
+    margin-bottom: 20px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.clear:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 3px white;
+    color: white;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    border-color: transparent;
+}
+
+.add {
+    border: none;
+    outline: none;
+    font-size: 2.0rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background: rgb(21, 97, 97);
+    transition: 0.5s ease;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.rotate {
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#wrap {
+    transform: scale(0);
+    transition: 0.9s ease;
+    border-radius: 25px 0px 25px 0px;
+    justify-content: center;
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bolder;
+    background-color: rgb(21, 97, 97);
+    padding: 20px;
+    display: none;
+}
+
+#popup {
+    display: flex;
+    justify-content: center;
+}
+
+.close {
+    display: flex;
+    transition: all 0.6s ease;
+    margin-left: 140px;
+    margin-top: -40px;
+    background-color: rgb(21, 97, 97);
+    color: white;
+    font-size: 40px;
+    border-color: transparent;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.close:hover {
+    transform: rotate(405deg);
+    color: black;
+}
+
+input[type="submit"] {
+    background-color: #ededed;
+    border-color: transparent;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-family: monospace;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0.8;
+}
+
+.bookshelf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 1000;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    margin: 2rem;
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .book {
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    background: black;
+    font-family: monospace;
+    color: #ededed;
+  }
+
+  .book:hover {
+    box-shadow: 3px 3px 30px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .book h2 {
+    background-color: rgb(21, 97, 97);
+    border-radius: 5px 5px 0px 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .book h3 {
+    margin-top: 10px;
+    border-bottom: 5px solid rgb(21, 97, 97);
+    margin-bottom: 4px;
+  }
+
+  .book .update {
+    margin-top: 60px;
+  }
+  
+  #userTitle:invalid, #userAuthor:invalid, #pages:invalid {
+    border-color: red;
+  }
+
+  #userTitle::placeholder, #userAuthor::placeholder, #pages::placeholder {
+    color: black;
+  }
+
+
+
+@media (max-width: 215px) {
+    .library {
+        background-color: transparent;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .main, .main_title {
+        width: 150px;
+        margin: auto;
+    }
+
+    .main {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 375px) {
+    .library {
+        background-color: transparent;
+    }
+}
+
+@media (max-height: 168px) {
+    .add {
+        background-color: rgb(24, 24, 53);
+    }
+}
+
+@media (max-width: 270px) {
+    .library {
+        background-color: transparent;
+    }
+}
+
+
+
+
+
