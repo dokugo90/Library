@@ -32,6 +32,7 @@ class Book {
       formbody.style.transform = "scale(1)";
       add.style.transform = "rotate(45deg)";
       overlay.style.opacity = 1;
+      overlay.style.height = '150vh'
       formOpen = true;
     }
   }
